@@ -18,7 +18,26 @@
  */
 #include <stdio.h>
 
+const int no21_MAX = 10001;
+int no21[no21_MAX] ;
+
+int d(int n) {
+    int amicable = 0, factor = 0;
+    
+    while( ++factor < n ) {
+        if(!(n % factor )) amicable += factor;
+    }
+    return no21[n] = amicable;
+}
+
 int no21_main() {
-    printf("%d", 1+2+4+71+142);
+    int n = 1, sum = 0;
+    while ( n++ < no21_MAX ) {
+        d(n);
+        
+        if(no21[n] < no21_MAX && no21[no21[n]] == n && no21[n] != n)
+            sum += no21[n] + n;
+    }
+    printf("%d", sum);
     return 0;
 }
