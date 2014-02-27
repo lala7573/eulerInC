@@ -10,6 +10,8 @@
  Copyright (c) 2013년 Yeonju. All rights reserved.
  */
 
+
+
 #include <stdio.h>
 #include <math.h>
 #include <time.h>
@@ -21,7 +23,7 @@ int main(int argc, const char * argv[])
     // insert code here...
     printf("Hello, World!\n");
     clock_t start = clock();
-    no20_main();
+    no21_main();
     
     clock_t end = clock();
     printf( "\n%ldms", (end-start)*1000/CLOCKS_PER_SEC);
@@ -30,4 +32,3 @@ int main(int argc, const char * argv[])
     
     return 0;
 }
-
